@@ -5,23 +5,23 @@
 class Modapi < Formula
   desc "Moderation API CLI: moderate content and manage your setup from the terminal"
   homepage "https://github.com/moderation-api/cli"
-  version "0.3.3"
+  version "0.4.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/moderation-api/cli/releases/download/v0.3.3/modapi_Darwin_x86_64.tar.gz"
-      sha256 "23fed0fb571c8c14fde61bdf22b6d9f1b3120a446b2d98ff21220889bf1f22b3"
+      url "https://github.com/moderation-api/cli/releases/download/v0.4.0/modapi_Darwin_x86_64.tar.gz"
+      sha256 "7296ea8b3ec4cbf639709d0d215c1e7d4d7f9ca946923382f00fb24201f7e45a"
 
-      def install
+      define_method(:install) do
         bin.install "modapi"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/moderation-api/cli/releases/download/v0.3.3/modapi_Darwin_arm64.tar.gz"
-      sha256 "33a99db93b5431194fa5e82b98039d93309ce180e0fc1d21219aa42e7a058f07"
+      url "https://github.com/moderation-api/cli/releases/download/v0.4.0/modapi_Darwin_arm64.tar.gz"
+      sha256 "fc1d434dc4128ce5d050bf1ace8ef5ea71f7f84481bf11b184114bc41e09ee46"
 
-      def install
+      define_method(:install) do
         bin.install "modapi"
       end
     end
@@ -29,18 +29,16 @@ class Modapi < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/moderation-api/cli/releases/download/v0.3.3/modapi_Linux_x86_64.tar.gz"
-      sha256 "a55bc98ff382642e098841f68749efc1689f2c6e75be1b18fed38402fe17bb62"
-
-      def install
+      url "https://github.com/moderation-api/cli/releases/download/v0.4.0/modapi_Linux_x86_64.tar.gz"
+      sha256 "28d616dae2e69df536f7bef63825996ca7f4bd9a6f4676da2274ef8032b3e834"
+      define_method(:install) do
         bin.install "modapi"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/moderation-api/cli/releases/download/v0.3.3/modapi_Linux_arm64.tar.gz"
-      sha256 "e8a8cc9e72cab25376dd4dd5407735873d5d64a9992724ec2212793cea59bb29"
-
-      def install
+      url "https://github.com/moderation-api/cli/releases/download/v0.4.0/modapi_Linux_arm64.tar.gz"
+      sha256 "00078142427277c03e417364139cf8dafac40087265666af294ab60f26ce3c62"
+      define_method(:install) do
         bin.install "modapi"
       end
     end

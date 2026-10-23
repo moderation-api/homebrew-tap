@@ -5,21 +5,21 @@
 class Modapi < Formula
   desc "Moderation API CLI: moderate content and manage your setup from the terminal"
   homepage "https://github.com/moderation-api/cli"
-  version "0.3.1"
+  version "0.3.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/moderation-api/cli/releases/download/v0.3.1/modapi_Darwin_x86_64.tar.gz"
-      sha256 "cb1dc48301cb5843dabd7e19c12b902a087893485fe4cf9742b549a33f7ec693"
+      url "https://github.com/moderation-api/cli/releases/download/v0.3.3/modapi_Darwin_x86_64.tar.gz"
+      sha256 "23fed0fb571c8c14fde61bdf22b6d9f1b3120a446b2d98ff21220889bf1f22b3"
 
       def install
         bin.install "modapi"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/moderation-api/cli/releases/download/v0.3.1/modapi_Darwin_arm64.tar.gz"
-      sha256 "82d8d63fecd21967e9130785bc26448def44694c0c5c89058cbfdb61e784fb44"
+      url "https://github.com/moderation-api/cli/releases/download/v0.3.3/modapi_Darwin_arm64.tar.gz"
+      sha256 "33a99db93b5431194fa5e82b98039d93309ce180e0fc1d21219aa42e7a058f07"
 
       def install
         bin.install "modapi"
@@ -29,16 +29,16 @@ class Modapi < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/moderation-api/cli/releases/download/v0.3.1/modapi_Linux_x86_64.tar.gz"
-      sha256 "750e8658441c9c47c9b293900bb82e8a5301317bb15562077c8c5c0da693bbbb"
+      url "https://github.com/moderation-api/cli/releases/download/v0.3.3/modapi_Linux_x86_64.tar.gz"
+      sha256 "a55bc98ff382642e098841f68749efc1689f2c6e75be1b18fed38402fe17bb62"
 
       def install
         bin.install "modapi"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/moderation-api/cli/releases/download/v0.3.1/modapi_Linux_arm64.tar.gz"
-      sha256 "7a3e2695d4a5f075bee5c050c70b5d6a731366762638c8d636d069f8f98ec6c0"
+      url "https://github.com/moderation-api/cli/releases/download/v0.3.3/modapi_Linux_arm64.tar.gz"
+      sha256 "e8a8cc9e72cab25376dd4dd5407735873d5d64a9992724ec2212793cea59bb29"
 
       def install
         bin.install "modapi"

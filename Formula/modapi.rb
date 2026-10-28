@@ -5,21 +5,21 @@
 class Modapi < Formula
   desc "Moderation API CLI: moderate content and manage your setup from the terminal"
   homepage "https://github.com/moderation-api/cli"
-  version "0.5.0"
+  version "0.6.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/moderation-api/cli/releases/download/v0.5.0/modapi_Darwin_x86_64.tar.gz"
-      sha256 "94d1f2fafa9d6cddc6e11e05260e78d9ed3b1ddefc268baf79a980b4eb24f1f4"
+      url "https://github.com/moderation-api/cli/releases/download/v0.6.0/modapi_Darwin_x86_64.tar.gz"
+      sha256 "4c554597a0ac815d0cf0473902b538823b8f469f86ee6c644045dea9c215d6a6"
 
       define_method(:install) do
         bin.install "modapi"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/moderation-api/cli/releases/download/v0.5.0/modapi_Darwin_arm64.tar.gz"
-      sha256 "60c30ff5a9b319ff52469203c362fafff56afe26b90de0f59530af2af12d116b"
+      url "https://github.com/moderation-api/cli/releases/download/v0.6.0/modapi_Darwin_arm64.tar.gz"
+      sha256 "01cd6298a97bfb4e7ad5e7289acdaa7d75df3c9d8edf598e1d72d588d97000d4"
 
       define_method(:install) do
         bin.install "modapi"
@@ -29,15 +29,15 @@ class Modapi < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/moderation-api/cli/releases/download/v0.5.0/modapi_Linux_x86_64.tar.gz"
-      sha256 "8b4a6353e78ba0deb5f5795b3e806e377b52e41f904a01733763487860a6d7cc"
+      url "https://github.com/moderation-api/cli/releases/download/v0.6.0/modapi_Linux_x86_64.tar.gz"
+      sha256 "b96eeb66a7e11564d0a61f870bebe9d9ad6f1e7a007f5a4c689758b6a96ec478"
       define_method(:install) do
         bin.install "modapi"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/moderation-api/cli/releases/download/v0.5.0/modapi_Linux_arm64.tar.gz"
-      sha256 "7342098da10bd9f389f1b1810b0c7312188de5e5071e884f4ada2982cfd84d91"
+      url "https://github.com/moderation-api/cli/releases/download/v0.6.0/modapi_Linux_arm64.tar.gz"
+      sha256 "acb7f727da0ce8d5aa4ee273409fc878889ff4c8b0053b31f8d539a97ed23457"
       define_method(:install) do
         bin.install "modapi"
       end
